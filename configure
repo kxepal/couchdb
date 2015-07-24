@@ -558,8 +558,8 @@ INSTALLDIR=$LIBDIR/couchdb
 LOG_FILE=$LOGDIR/couch.log
 
 
-echo "==> configuring couchdb in rel/couchdb.config"
-cat > rel/couchdb.config << EOF
+echo "==> configuring couchdb in ${rootdir}/rel/couchdb.config"
+cat > ${rootdir}/rel/couchdb.config << EOF
 % Licensed under the Apache License, Version 2.0 (the "License"); you may not
 % use this file except in compliance with the License. You may obtain a copy of
 % the License at
@@ -586,7 +586,7 @@ cat > rel/couchdb.config << EOF
 {backend_port, 5986}.
 EOF
 
-cat > install.mk << EOF
+cat > ${rootdir}/install.mk << EOF
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You may obtain a copy of
 # the License at
