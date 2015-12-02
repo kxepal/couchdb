@@ -412,7 +412,7 @@ check_request(Req, Remote, Local) ->
     Resp =ibrowse:send_req(
         Url, Req#req.headers, Req#req.method, Req#req.body, Opts
     ),
-    %?debugFmt("ibrowse response: ~p", [Resp]),
+    ?debugFmt("ibrowse response: ~p", [Resp]),
     case Local of
         no_local ->
             ok;
