@@ -49,7 +49,7 @@ setup() ->
         [list_to_binary(proxy_url())])),
     couch_config:set("httpd_global_handlers", "_test", Value),
     % let couch_httpd restart
-    timer:sleep(100),
+    timer:sleep(200),
     Pid.
 
 teardown(Pid) ->
