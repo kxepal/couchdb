@@ -415,7 +415,7 @@ esac
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking Erlang version compatibility" >&5
 $as_echo_n "checking Erlang version compatibility... " >&6; }
-erlang_version_error="The installed Erlang version must be >= R14B (erts-5.8.1) and =< 19 (erts-8.0)"
+erlang_version_error="The installed Erlang version must be >= R14B (erts-5.8.1) and =< 20 (erts-9.0)"
 
 version="`${ERL} -version 2>&1 | ${SED} 's/[[^0-9]]/ /g'` 0 0 0"
 major_version=`echo $version | ${AWK} "{print \\$1}"`
@@ -423,11 +423,11 @@ minor_version=`echo $version | ${AWK} "{print \\$2}"`
 patch_version=`echo $version | ${AWK} "{print \\$3}"`
 echo -n "detected Erlang version: $major_version.$minor_version.$patch_version..."
 
-if test $major_version -lt 5 -o $major_version -gt 8; then
+if test $major_version -lt 5 -o $major_version -gt 9; then
     as_fn_error $? "$erlang_version_error major_version does not match" "$LINENO" 5
 fi
 
-if test $major_version -eq 5 -a $minor_version -lt 8; then
+if test $major_version -eq 5 -a $minor_version -lt 9; then
     as_fn_error $? "$erlang_version_error minor_version does not match" "$LINENO" 5
 fi
 

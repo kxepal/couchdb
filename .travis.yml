@@ -11,6 +11,7 @@ script:
    - make distcheck
 language: erlang
 otp_release:
+   - 20.1
    - 19.0
    - 18.3
    - 17.0
